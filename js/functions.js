@@ -25,6 +25,9 @@ isPalindrome('');
 //извлечение чисел от 0 до 9 из передаваемой строки
 const getNumber = (value) => {
   let res = '';
+  if (typeof value === 'number') {
+    return value;
+  }
   for (let i = 0; i < value.length; i++) {
     if (!Number.isNaN(parseInt(value.at(i), 10))) {
       res += value.at(i);
